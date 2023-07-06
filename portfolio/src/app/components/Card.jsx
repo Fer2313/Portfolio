@@ -77,7 +77,7 @@ export default function Card({ES}) {
                         <p style={{ fontSize: "10px" }} className='font-semibold'>fernandojosefantini7.0@gmail.com</p>
                     </div>
                 </div>
-                <button onClick={() => setMostrarComponenteNuevo(false)} className='border-t border-cyan-500 flex rounded-b mt-2 hover:bg-[#144272] items-center justify-center w-full h-full'>
+                <button onClick={() => setMostrarComponenteNuevo(false)} className='flex rounded-b mt-2 hover:bg-[#144272] items-center justify-center w-full h-full'>
                     <BsChevronCompactUp size={25}></BsChevronCompactUp>
                 </button>
             </animated.div> :
