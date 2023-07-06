@@ -8,8 +8,8 @@ import { FaCss3Alt, FaNode } from 'react-icons/fa';
 import { BiLogoJavascript, BiLogoPostgresql, BiLogoReact, BiLogoRedux, BiLogoTailwindCss } from 'react-icons/bi';
 
 export default function Competitions({ES ,mostrarComponenteNuevo, setMostrarComponenteNuevo}) {
-    const animacion = useSpring({ height: mostrarComponenteNuevo ? '400px' : '25px' });
-    const animacion2 = useSpring({ height: !mostrarComponenteNuevo ? '25px' : '400px' });
+    const animacion = useSpring({ height: mostrarComponenteNuevo ? '500px' : '25px' });
+    const animacion2 = useSpring({ height: !mostrarComponenteNuevo ? '25px' : '500px' });
     return (
         <div id='competitions'>
             {mostrarComponenteNuevo ? <animated.div style={animacion} className='flex flex-col w-full items-center rounded bg-slate-800'>
@@ -52,7 +52,49 @@ export default function Competitions({ES ,mostrarComponenteNuevo, setMostrarComp
                             data-te-ripple-init
                             class="[word-wrap: break-word] my-[5px] mr-4 flex h-[32px] cursor-pointer items-center justify-between rounded-[16px] bg-[#eceff1] px-[12px] py-0 text-[13px] font-normal normal-case leading-loose text-[#4f4f4f] shadow-none transition-[opacity] duration-300 ease-linear hover:!shadow-none active:bg-[#cacfd1] dark:bg-neutral-600 dark:text-neutral-200"
                             data-te-close="true">
-                            {!ES?"Soft skills":"Habilidades blandas"}
+                            {!ES?"Collaborative":"Colaborativo"}
+                        </div>
+                        <div
+                            data-te-chip-init
+                            data-te-ripple-init
+                            class="[word-wrap: break-word] my-[5px] mr-4 flex h-[32px] cursor-pointer items-center justify-between rounded-[16px] bg-[#eceff1] px-[12px] py-0 text-[13px] font-normal normal-case leading-loose text-[#4f4f4f] shadow-none transition-[opacity] duration-300 ease-linear hover:!shadow-none active:bg-[#cacfd1] dark:bg-neutral-600 dark:text-neutral-200"
+                            data-te-close="true">
+                            {!ES?"Autodidact":"Autodidacta"}
+                        </div>
+                        <div
+                            data-te-chip-init
+                            data-te-ripple-init
+                            class="[word-wrap: break-word] my-[5px] mr-4 flex h-[32px] cursor-pointer items-center justify-between rounded-[16px] bg-[#eceff1] px-[12px] py-0 text-[13px] font-normal normal-case leading-loose text-[#4f4f4f] shadow-none transition-[opacity] duration-300 ease-linear hover:!shadow-none active:bg-[#cacfd1] dark:bg-neutral-600 dark:text-neutral-200"
+                            data-te-close="true">
+                            {!ES?"Proactive":"Proactivo"}
+                        </div>
+                        <div
+                            data-te-chip-init
+                            data-te-ripple-init
+                            class="[word-wrap: break-word] my-[5px] mr-4 flex h-[32px] cursor-pointer items-center justify-between rounded-[16px] bg-[#eceff1] px-[12px] py-0 text-[13px] font-normal normal-case leading-loose text-[#4f4f4f] shadow-none transition-[opacity] duration-300 ease-linear hover:!shadow-none active:bg-[#cacfd1] dark:bg-neutral-600 dark:text-neutral-200"
+                            data-te-close="true">
+                            Scrum
+                        </div>
+                        <div
+                            data-te-chip-init
+                            data-te-ripple-init
+                            class="[word-wrap: break-word] my-[5px] mr-4 flex h-[32px] cursor-pointer items-center justify-between rounded-[16px] bg-[#eceff1] px-[12px] py-0 text-[13px] font-normal normal-case leading-loose text-[#4f4f4f] shadow-none transition-[opacity] duration-300 ease-linear hover:!shadow-none active:bg-[#cacfd1] dark:bg-neutral-600 dark:text-neutral-200"
+                            data-te-close="true">
+                            {!ES?"Dedication":"Dedicacion"}
+                        </div>
+                        <div
+                            data-te-chip-init
+                            data-te-ripple-init
+                            class="[word-wrap: break-word] my-[5px] mr-4 flex h-[32px] cursor-pointer items-center justify-between rounded-[16px] bg-[#eceff1] px-[12px] py-0 text-[13px] font-normal normal-case leading-loose text-[#4f4f4f] shadow-none transition-[opacity] duration-300 ease-linear hover:!shadow-none active:bg-[#cacfd1] dark:bg-neutral-600 dark:text-neutral-200"
+                            data-te-close="true">
+                            {!ES?"Autonomous":"Autonomo"}
+                        </div>
+                        <div
+                            data-te-chip-init
+                            data-te-ripple-init
+                            class="[word-wrap: break-word] my-[5px] mr-4 flex h-[32px] cursor-pointer items-center justify-between rounded-[16px] bg-[#eceff1] px-[12px] py-0 text-[13px] font-normal normal-case leading-loose text-[#4f4f4f] shadow-none transition-[opacity] duration-300 ease-linear hover:!shadow-none active:bg-[#cacfd1] dark:bg-neutral-600 dark:text-neutral-200"
+                            data-te-close="true">
+                            {!ES?"Creativity":"Creatividad"}
                         </div>
                         <div
                             data-te-chip-init

@@ -9,8 +9,8 @@ import { useSpring, animated } from 'react-spring';
 export default function Card({ES}) {
     const [mostrarComponenteNuevo, setMostrarComponenteNuevo] = useState(true);
     const [button, setButton] = useState(false);
-    const animacion = useSpring({ height: mostrarComponenteNuevo ? '240px' : '25px' });
-    const animacion2 = useSpring({ height: !mostrarComponenteNuevo ? '25px' : '240px' });
+    const animacion = useSpring({ height: mostrarComponenteNuevo ? '288px' : '25px' });
+    const animacion2 = useSpring({ height: !mostrarComponenteNuevo ? '25px' : '288px' });
     console.log(animacion)
     return (
         <div className="flex flex-col w-44 ">
