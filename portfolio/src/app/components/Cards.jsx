@@ -7,7 +7,7 @@ import ReactPlayer from 'react-player/youtube'
 import "./Modal.css"
 import Modal from './Modal'
 import { BsGithub } from 'react-icons/bs'
-export default function Cards({ES,isModalOpen, setIsModalOpen}) {
+export default function Cards({isModalOpen1,ES,isModalOpen, setIsModalOpen}) {
   const openModal = () => {
     setIsModalOpen(true);
   };
@@ -22,7 +22,7 @@ export default function Cards({ES,isModalOpen, setIsModalOpen}) {
         {
           projects.map((p, index) => (
             <div key={index} className="w-64 shadow-xl bg-[#10cc84] pb-2 rounded-md">
-              {!isModalOpen?<button onClick={openModal} className='flex justify-center items-center hover:brightness-50'>
+              {!isModalOpen1?<button onClick={openModal} className='flex justify-center items-center hover:brightness-50'>
                 <Image className='rounded-t-md ' src={p.imagen} width={400} height={200} alt={p.nombre}>
                 </Image>
                 <AiFillPlayCircle size={40} className='absolute'></AiFillPlayCircle>
