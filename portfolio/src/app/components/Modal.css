@@ -10,12 +10,12 @@
     align-items: center;
   }
   .modal-content {
-    background-color: #03965d;
-    padding: 20px;
-    border-radius: 4px;
+    background-color: #144272;
+    padding: 10px;
+    border-radius: 5px;
     width: 900px; /* Aumenta el ancho máximo */
-    height: 600px; /* Aumenta la altura máxima */
-    overflow: auto;
+    height: 550px; /* Aumenta la altura máxima */
+    overflow: scroll;
   }
   
   .close {

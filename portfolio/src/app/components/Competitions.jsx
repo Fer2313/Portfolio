@@ -1,19 +1,55 @@
-'use client'
-import React, { useState } from 'react'
-import { useSpring, animated } from 'react-spring';
-import { BsChevronCompactDown, BsChevronCompactUp } from 'react-icons/bs'
-import { AiFillHtml5 } from 'react-icons/ai';
-import { SiSequelize } from 'react-icons/si';
-import { FaCss3Alt, FaNode } from 'react-icons/fa';
-import { BiLogoJavascript, BiLogoPostgresql, BiLogoReact, BiLogoRedux, BiLogoTailwindCss } from 'react-icons/bi';
+"use client";
+import React from "react";
 
-export default function Competitions({ES ,mostrarComponenteNuevo, setMostrarComponenteNuevo}) {
-    const animacion = useSpring({ height: mostrarComponenteNuevo ? '500px' : '25px' });
-    const animacion2 = useSpring({ height: !mostrarComponenteNuevo ? '25px' : '500px' });
-    return (
-        <div id='competitions'>
-            {mostrarComponenteNuevo ? <animated.div style={animacion} className='flex flex-col w-full items-center rounded bg-slate-800'>
-                <button onClick={() => setMostrarComponenteNuevo(false)} className='flex w-full justify-center hover:rounded hover:bg-slate-600'><BsChevronCompactDown size={30}></BsChevronCompactDown></button>
+export default function Competitions({ES}) {
+  return (
+    <article id="competitions" className="flex flex-col bg-[#242A42] p-5 gap-10">
+      <section className="flex justify-between mx-20">
+        <div className="flex flex-col gap-5">
+          <span>
+            <h3 className="text-lg font-bold">{!ES ?"Education":"Educación"}</h3>
+            <h3 className="text-[#CCDDF1]">{!ES ?"Secondary":"Secundario"}</h3>
+            <h4 className="text-sm">Ipem N° 37 Cnel. Hilario Ascasubi.</h4>
+            <p className="text-xs w-72">
+            {!ES ?"Certificate in Business Administration. Finish date":"Certificado en Administración de Empresas. Fecha de finalización"} 10/12/21.
+            </p>
+          </span>
+          <span>
+            <h3 className="text-[#CCDDF1]">Superior</h3>
+            <h4 className="text-sm">Bootcamp Soy Henry.</h4>
+            <p className="text-xs w-60">
+            {!ES ?"Certified in Full Stack Developer. Finish date":"Certificado en Full Stack Developer. Fecha de finalización"} 1/7/23
+            </p>
+            <a href='https://certificates.soyhenry.com/new-cert?id=f475681bc6eb140e244bcd4b1fde476adc1569581701a0ab4de91aa1ac809022' target="_blank" className="bg-[#354673] hover:bg-[#303e66] text-xs py-1 px-2 rounded">{!ES ?"Certificate":"Certificado"}</a>
+          </span>
+        </div>
+        <span>
+          <h3 className="text-lg font-bold text-end">{!ES ?"Skills":"Habilidades"}</h3>
+          <div className="flex flex-col text-xs font-semibold ">
+            <ul className="flex flex-col items-end gap-1">
+              <li>{!ES ?"Technical":"Tecnico"}</li>
+              <li>{!ES ?"Collaborative":"Colaborativo"}</li>
+              <li>{!ES ?"Autodidact":"Autodidacta"}</li>
+              <li>{!ES ?"Proactive":"Proactivo"}</li>
+              <li>Scrum</li>
+              <li>{!ES ?"Dedicated":"Dedicado"}</li>
+              <li>{!ES ?"Autonomous":"Autonomo"}</li>
+              <li>{!ES ?"Creative":"Creativo"}</li>
+              <li>{!ES ?"Basic english":"Ingles basico"}</li>
+            </ul>
+          </div>
+        </span>
+      </section>
+      <section className="flex flex-col items-center gap-1">
+        <h3 className="text-lg text-center font-bold">{!ES ?"Goals and objectives":"Metas y objetivos"}</h3>
+        <p className="text-start mx-28 ">
+        {!ES ?"My goal as a programmer is to create the best websites interactive, functional and attractive for the user and follow learning in this process.":"Mi objetivo como programador es crear los mejores sitios web interactivos, funcionales y atractivos para el usuario y seguir aprendiendo en este proceso."}
+        </p>
+      </section>
+    </article>
+  );
+}
+/*   <div className='flex flex-col w-full items-center rounded bg-[#242A42]'>
                 <div className='flex w-full justify-around p-5'>
                     <div className='flex flex-col gap-2'>
                         <h2 className='text-2xl'>{!ES?"Education":"Educacion"}</h2>
@@ -101,25 +137,5 @@ export default function Competitions({ES ,mostrarComponenteNuevo, setMostrarComp
                         <h2 className='text-2xl'>{!ES?"Goals and objectives":"Metas y objetivos"}</h2>
                         <p className='w-72 text-sm mt-2 text-[#96dfa5]'>{!ES?"My goal as a programmer is to create the best interactive, functional and attractive websites for the user and to continue learning in this process.":"Mi objetivo como programador es crear los mejores sitios web interactivos, funcionales y atractivos para el usuario y seguir aprendiendo en este proceso."}</p>
                     </div>
-                    <div>
-                    <h2 className='text-2xl'>{!ES?"Technologies learned":"Tecnologias aprendidas"}</h2>
-                    <div className='grid grid-cols-4 mt-2'>
-                    <AiFillHtml5 size={45}></AiFillHtml5>
-                    <FaCss3Alt size={45}></FaCss3Alt>
-                    <BiLogoJavascript size={45}></BiLogoJavascript>
-                    <BiLogoReact size={45}></BiLogoReact>
-                    <BiLogoTailwindCss size={45}></BiLogoTailwindCss>
-                    <BiLogoRedux size={45}></BiLogoRedux>
-                    <BiLogoPostgresql size={45}></BiLogoPostgresql>
-                    <SiSequelize size={45}></SiSequelize>
-                    <FaNode size={45}></FaNode>
-                    </div>
-                    </div>
                 </div>
-            </animated.div> :
-                <animated.div style={animacion2}>
-                    <button onClick={() => setMostrarComponenteNuevo(true)} className='flex w-full justify-center bg-slate-800 hover:rounded hover:bg-slate-600'><BsChevronCompactUp size={30}></BsChevronCompactUp></button>
-                </animated.div>}
-        </div>
-    )
-}
+            </div>  */

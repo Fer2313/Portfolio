@@ -17,19 +17,18 @@ export default function Cards({isModalOpen1,ES,isModalOpen, setIsModalOpen}) {
   };
   console.log(isModalOpen)
   return (
-    <div>
-      <div className='grid gap-3 grid-cols-3'>
+    <div className='flex justify-center w-64'>
         {
           projects.map((p, index) => (
-            <div key={index} className="w-64 shadow-xl bg-[#10cc84] pb-2 rounded-md">
+            <div key={index} className="w-64 h-56 bg-[#c6dcfc] pb-2 rounded-md">
               {!isModalOpen1?<button onClick={openModal} className='flex justify-center items-center hover:brightness-50'>
                 <Image className='rounded-t-md ' src={p.imagen} width={400} height={200} alt={p.nombre}>
                 </Image>
                 <AiFillPlayCircle size={40} className='absolute'></AiFillPlayCircle>
               </button>:null}
-              <div className='mt-1 mx-5 mb-5'>
-                <h1 >{p.nombre}</h1>
-                <h2 className=' text-xs'>{!ES?p.encabezadoI:p.encabezadoE}</h2>
+              <div className='mt-1 mx-5 mb-5 text-black'>
+                <h1>{p.nombre}</h1>
+                <h2 style={{ fontSize:"12px"}}>{!ES?p.encabezadoI:p.encabezadoE}</h2>
               </div>
               <Modal isOpen={isModalOpen} onClose={closeModal}>
                 <h2>{p.nombre}</h2>
@@ -45,7 +44,6 @@ export default function Cards({isModalOpen1,ES,isModalOpen, setIsModalOpen}) {
             </div>
           ))
         }
-      </div>
     </div>
   )
 }
