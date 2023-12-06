@@ -6,6 +6,7 @@ import { useState } from "react";
 import Carta_de_Presentacion from "./components/Carta_de_presentacion";
 import Nav from "./components/Nav";
 import AboutMe from "./components/AboutMe";
+import Footer from "./components/Footer";
 
 //palete ["#777d71", "#bbd48c", "#f8f6e6", "#e0ddc6", "#bef509"]
 export default function Home() {
@@ -19,7 +20,7 @@ export default function Home() {
       <ProjectsSection ES={ES}></ProjectsSection>
       </div>
       <Competitions ES={ES}></Competitions>
-      
+      <Footer ES={ES}></Footer>
     </div>
   )
 }

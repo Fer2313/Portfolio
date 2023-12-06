@@ -28,7 +28,7 @@ export default function Cards({isModalOpen1,ES,isModalOpen, setIsModalOpen}) {
               </button>:null}
               <div className='mt-1 mx-5 mb-5 text-black'>
                 <h1>{p.nombre}</h1>
-                <h2 style={{ fontSize:"12px"}}>{!ES?p.encabezadoI:p.encabezadoE}</h2>
+                <h2 style={{ fontSize:"11px"}}>{!ES?p.encabezadoI:p.encabezadoE}</h2>
               </div>
               <Modal isOpen={isModalOpen} onClose={closeModal}>
                 <h2>{p.nombre}</h2>
