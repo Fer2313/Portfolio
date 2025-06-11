@@ -1,49 +1,72 @@
 "use client";
 import React from "react";
 
-export default function Competitions({ES}) {
+export default function Competitions({ ES }) {
   return (
-    <article id="competitions" className="flex flex-col bg-[#242A42] p-5 gap-10">
-      <section className="flex justify-between mx-20">
+    <article
+      id="competitions"
+      className="flex flex-col items-center bg-[#242A42] p-10 gap-10"
+    >
+      <section className="flex flex-col gap-5">
         <div className="flex flex-col gap-5">
           <span>
-            <h3 className="text-lg font-bold">{!ES ?"Education":"Educación"}</h3>
-            <h3 className="text-[#CCDDF1]">{!ES ?"Secondary":"Secundario"}</h3>
-            <h4 className="text-sm">Ipem N° 37 Cnel. Hilario Ascasubi.</h4>
-            <p className="text-xs w-72">
-            {!ES ?"Certificate in Business Administration. Finish date":"Certificado en Administración de Empresas. Fecha de finalización"} 10/12/21.
+            <h2 className="text-base sm:text-xl md:text-2xl lg:text-2xl font-bold">
+              {!ES ? "Education" : "Educación"}
+            </h2>
+            <h3 className="text-[#CCDDF1] text-base sm:text-lg md:text-xl lg:text-xl">
+              {!ES ? "Secondary" : "Secundario"}
+            </h3>
+            <h4 className="text-sm sm:text-base md:text-lg lg:text-lg">Ipem N° 37 Cnel. Hilario Ascasubi.</h4>
+            <p className="text-xs sm:text-sm md:text-base lg:text-base">
+              {!ES
+                ? "Certificate in Business Administration. Finish date"
+                : "Certificado en Administración de Empresas. Fecha de finalización"}{" "}
+              10/12/21.
             </p>
           </span>
           <span>
-            <h3 className="text-[#CCDDF1]">Superior</h3>
-            <h4 className="text-sm">Bootcamp Soy Henry.</h4>
-            <p className="text-xs w-60">
-            {!ES ?"Certified in Full Stack Developer. Finish date":"Certificado en Full Stack Developer. Fecha de finalización"} 1/7/23
+            <h3 className="text-[#CCDDF1] text-base sm:text-lg md:text-xl lg:text-xl">Superior</h3>
+            <h4 className="text-sm sm:text-base md:text-lg lg:text-lg">Bootcamp Soy Henry.</h4>
+            <p className="mb-2 text-xs sm:text-sm md:text-base lg:text-base">
+              {!ES
+                ? "Certified in Full Stack Developer. Finish date"
+                : "Certificado en Full Stack Developer. Fecha de finalización"}{" "}
+              1/7/23
             </p>
-            <a href='https://certificates.soyhenry.com/new-cert?id=f475681bc6eb140e244bcd4b1fde476adc1569581701a0ab4de91aa1ac809022' target="_blank" className="bg-[#354673] hover:bg-[#303e66] text-xs py-1 px-2 rounded">{!ES ?"Certificate":"Certificado"}</a>
+            <a
+              href="https://certificates.soyhenry.com/new-cert?id=f475681bc6eb140e244bcd4b1fde476adc1569581701a0ab4de91aa1ac809022"
+              target="_blank"
+              className="bg-[#354673] hover:bg-[#303e66] text-xs sm:text-sm md:text-base lg:text-base py-1 px-2 rounded"
+            >
+              {!ES ? "Certificate" : "Certificado"}
+            </a>
           </span>
         </div>
-        <span>
-          <h3 className="text-lg font-bold text-end">{!ES ?"Skills":"Habilidades"}</h3>
-          <div className="flex flex-col text-xs font-semibold ">
-            <ul className="flex flex-col items-end gap-1">
-              <li>{!ES ?"Technical":"Tecnico"}</li>
-              <li>{!ES ?"Collaborative":"Colaborativo"}</li>
-              <li>{!ES ?"Autodidact":"Autodidacta"}</li>
-              <li>{!ES ?"Proactive":"Proactivo"}</li>
-              <li>Scrum</li>
-              <li>{!ES ?"Dedicated":"Dedicado"}</li>
-              <li>{!ES ?"Autonomous":"Autonomo"}</li>
-              <li>{!ES ?"Creative":"Creativo"}</li>
-              <li>{!ES ?"Basic english":"Ingles basico"}</li>
-            </ul>
-          </div>
+        <span className="flex flex-col gap-2">
+          <h3 className="text-base sm:text-xl md:text-2xl lg:text-2xl font-bold">
+            {!ES ? "Skills" : "Habilidades"}
+          </h3>
+          <ul className="flex flex-wrap gap-2">
+            <li class="bg-slate-100 text-xs sm:text-sm md:text-base lg:text-base text-slate-800 font-medium me-2 px-2 py-0.5 rounded-sm dark:bg-slate-700 dark:text-slate-300">{!ES ? "Technical" : "Tecnico"}</li>
+            <li class="bg-slate-100 text-xs sm:text-sm md:text-base lg:text-base text-slate-800 font-medium me-2 px-2 py-0.5 rounded-sm dark:bg-slate-700 dark:text-slate-300">{!ES ? "Collaborative" : "Colaborativo"}</li>
+            <li class="bg-slate-100 text-xs sm:text-sm md:text-base lg:text-base text-slate-800 font-medium me-2 px-2 py-0.5 rounded-sm dark:bg-slate-700 dark:text-slate-300">{!ES ? "Autodidact" : "Autodidacta"}</li>
+            <li class="bg-slate-100 text-xs sm:text-sm md:text-base lg:text-base text-slate-800 font-medium me-2 px-2 py-0.5 rounded-sm dark:bg-slate-700 dark:text-slate-300">{!ES ? "Proactive" : "Proactivo"}</li>
+            <li class="bg-slate-100 text-xs sm:text-sm md:text-base lg:text-base text-slate-800 font-medium me-2 px-2 py-0.5 rounded-sm dark:bg-slate-700 dark:text-slate-300">Scrum</li>
+            <li class="bg-slate-100 text-xs sm:text-sm md:text-base lg:text-base text-slate-800 font-medium me-2 px-2 py-0.5 rounded-sm dark:bg-slate-700 dark:text-slate-300">{!ES ? "Dedicated" : "Dedicado"}</li>
+            <li class="bg-slate-100 text-xs sm:text-sm md:text-base lg:text-base text-slate-800 font-medium me-2 px-2 py-0.5 rounded-sm dark:bg-slate-700 dark:text-slate-300">{!ES ? "Autonomous" : "Autonomo"}</li>
+            <li class="bg-slate-100 text-xs sm:text-sm md:text-base lg:text-base text-slate-800 font-medium me-2 px-2 py-0.5 rounded-sm dark:bg-slate-700 dark:text-slate-300">{!ES ? "Creative" : "Creativo"}</li>
+            <li class="bg-slate-100 text-xs sm:text-sm md:text-base lg:text-base text-slate-800 font-medium me-2 px-2 py-0.5 rounded-sm dark:bg-slate-700 dark:text-slate-300">{!ES ? "Basic english" : "Ingles basico"}</li>
+          </ul>
         </span>
       </section>
-      <section className="flex flex-col items-center gap-1">
-        <h3 className="text-lg text-center font-bold">{!ES ?"Goals and objectives":"Metas y objetivos"}</h3>
-        <p className="text-start mx-28 ">
-        {!ES ?"My goal as a programmer is to create the best websites interactive, functional and attractive for the user and follow learning in this process.":"Mi objetivo como programador es crear los mejores sitios web interactivos, funcionales y atractivos para el usuario y seguir aprendiendo en este proceso."}
+      <section className="flex flex-col gap-1">
+        <h3 className="text-base sm:text-xl md:text-2xl lg:text-2xl font-bold">
+          {!ES ? "Goals and objectives" : "Metas y objetivos"}
+        </h3>
+        <p className="text-start text-xs sm:text-sm md:text-base lg:text-base">
+          {!ES
+            ? "My goal as a programmer is to create the best websites interactive, functional and attractive for the user and follow learning in this process."
+            : "Mi objetivo como programador es crear los mejores sitios web interactivos, funcionales y atractivos para el usuario y seguir aprendiendo en este proceso."}
         </p>
       </section>
     </article>

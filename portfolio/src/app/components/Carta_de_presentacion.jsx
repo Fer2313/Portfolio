@@ -1,23 +1,72 @@
-import Image from "next/image";
-import Avatar from "../imagenes/Imagen de WhatsApp 2023-06-26 a las 16.25.38.jpg";
+import { AiFillHtml5 } from "react-icons/ai";
+import { SiSequelize } from "react-icons/si";
 import { useState } from "react";
+import { FaCss3Alt, FaNode } from "react-icons/fa";
+import {
+  BiLogoJavascript,
+  BiLogoPostgresql,
+  BiLogoReact,
+  BiLogoRedux,
+  BiLogoTailwindCss,
+} from "react-icons/bi";
 
-function Carta_de_Presentacion({ ES, setESP }) {
+function Carta_de_Presentacion({
+  ES,
+  setESP,
+}) {
   const [boolean, setBoolean] = useState({
-    button1: true,
-    button2: false
-  })
+    button1: false,
+    button2: true,
+  });
   return (
-    <article className="p-5 bg-gradient-to-r from-[#81AAD9] to-[#3D5290]">
-      <section className="flex items-center justify-end">
+    <article className="flex flex-col py-10 px-5 sm:px-10 md:px-24 lg:px-32 bg-gradient-to-r gap-5 from-[#81AAD9] to-[#3D5290]">
+      <section className="flex justify-center">
+        <section className="flex flex-col gap-4">
+          <div className="flex flex-col gap-4">
+            <div className="flex flex-col text-center gap-1 sm:gap-2 md:gap-3 lg:gap-3">
+              <span className="text-3xl sm:text-4xl md:text-5xl lg:text-5xl font-bold">
+                Fernando Fantini.
+              </span>
+              <span className="text-xl sm:text-2xl md:text-3xl lg:text-3xl text-[#354673]">
+                {!ES ? "Full Stack Developer" : "Desarollador Full Stack"}
+              </span>
+            </div>
+            <span className="text-sm sm:text-lg md:text-xl lg:text-xl text-center">
+              {!ES
+                ? "Hello! I'm a certified developer passionate about creating amazing web experiences. My main focus has been in the Front-End area, where I feel most comfortable and can express my creativity."
+                : "Hola! Soy un desarrollador certificado apasionado por crear experiencias web increíbles. Mi enfoque principal ha sido en el ámbito Front-End, donde me siento más cómodo y puedo expresar mi creatividad."}
+            </span>
+          </div>
+        </section>
+      </section>
+      <section className="flex flex-col gap-2">
+        <div className="flex justify-center">
+          <div className="flex flex-wrap justify-center gap-3 sm:gap-7 md:gap-10 lg:gap-10">
+            <AiFillHtml5 size={45}></AiFillHtml5>
+            <FaCss3Alt size={45}></FaCss3Alt>
+            <BiLogoJavascript size={45}></BiLogoJavascript>
+            <BiLogoReact size={45}></BiLogoReact>
+            <BiLogoTailwindCss size={45}></BiLogoTailwindCss>
+            <BiLogoRedux size={45}></BiLogoRedux>
+            <BiLogoPostgresql size={45}></BiLogoPostgresql>
+            <SiSequelize size={45}></SiSequelize>
+            <FaNode size={45}></FaNode>
+          </div>
+        </div>
+      </section>
+      <section className="flex w-full justify-center">
         <button
           type="button"
-              onClick={()=>setBoolean({
-            button1: true,
-            button2: false
-          })}
-          onClickCapture={()=>setESP(false)} 
-          class={`${boolean.button1 ? 'bg-[#354673]' : "bg-[#35467363]"} inline-block rounded-l px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white transition duration-150 ease-in-out hover:bg-[#354673] focus:bg-[#354673] focus:outline-none focus:ring-0 active:bg-[#354673]`}
+          onClick={() =>
+            setBoolean({
+              button1: true,
+              button2: false,
+            })
+          }
+          onClickCapture={() => setESP(false)}
+          class={`${
+            boolean.button1 ? "bg-[#354673]" : "bg-[#35467363]"
+          } inline-block rounded-l px-6 pb-2 pt-2.5 text-xs sm:text-sm md:text-sm lg:text-sm font-medium uppercase leading-normal text-white transition duration-150 ease-in-out hover:bg-[#354673] focus:bg-[#354673] focus:outline-none focus:ring-0 active:bg-[#354673]`}
           data-te-ripple-init
           data-te-ripple-color="light"
         >
@@ -25,47 +74,27 @@ function Carta_de_Presentacion({ ES, setESP }) {
         </button>
         <button
           type="button"
-         onClick={()=>setBoolean({
-            button1: false,
-            button2: true
-          })}
-          onClickCapture={()=>setESP(true)} 
-          class={`${boolean.button2 ? 'bg-[#354673]' : "bg-[#35467363]"} inline-block rounded-r-md px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white transition duration-150 ease-in-out hover:bg-[#354673] focus:bg-[#354673] focus:outline-none focus:ring-0 active:bg-[#354673]`}
+          onClick={() =>
+            setBoolean({
+              button1: false,
+              button2: true,
+            })
+          }
+          onClickCapture={() => setESP(true)}
+          class={`${
+            boolean.button2 ? "bg-[#354673]" : "bg-[#35467363]"
+          } inline-block rounded-r-md px-6 pb-2 pt-2.5 text-xs sm:text-sm md:text-sm lg:text-sm font-medium uppercase leading-normal text-white transition duration-150 ease-in-out hover:bg-[#354673] focus:bg-[#354673] focus:outline-none focus:ring-0 active:bg-[#354673]`}
           data-te-ripple-init
           data-te-ripple-color="light"
         >
           Español
         </button>
       </section>
-      <section className="flex justify-between">
-        <section className="flex gap-4">
-          <div>
-            <Image src={Avatar} class="w-36 h-36 rounded-full" alt="Avatar" />
-            <div className="flex items-center justify-end ">
-              <a
-                href="https://www.mediafire.com/file/xgj5zl5n1x9cic0/CV.Fernando.F.pdf"
-                target="_blank"
-                className="bg-[#354673b9] p-1 mr-3 mb-3 absolute rounded-full font-bold"
-              >
-                CV
-              </a>
-            </div>
-          </div>
-          <div className="flex flex-col gap-4">
-            <div className="flex flex-col">
-              <span className="text-2xl font-bold">Fernando Fantini.</span>
-              <span className="text-sm text-[#354673]">
-                {!ES ? "Full Stack Developer" : "Desarollador Full Stack"}
-              </span>
-            </div>
-            <span className="text-xs w-80 text-justify">
-              {!ES
-                ? "Hello! I'm a certified developer passionate about creating amazing web experiences. My main focus has been in the Front-End area, where I feel most comfortable and can express my creativity."
-                : "Hola! Soy un desarrollador certificado apasionado por crear experiencias web increíbles. Mi enfoque principal ha sido en el ámbito Front-End, donde me siento más cómodo y puedo expresar mi creatividad."}
-            </span>
-          </div>
-        </section>
-        <section className="flex flex-col justify-end">
+    </article>
+  );
+}
+{
+  /*        <section className="flex flex-col justify-end">
           <div className="flex justify-center">
           <span>{!ES ? "Contacts" : "Contactos"}</span>
           </div>
@@ -121,10 +150,7 @@ function Carta_de_Presentacion({ ES, setESP }) {
               </svg>
             </a>
           </div>
-        </section>
-      </section>
-    </article>
-  );
+        </section> */
 }
 
 export default Carta_de_Presentacion;

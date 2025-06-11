@@ -6,7 +6,7 @@ export default function Footer({ ES }) {
     const [button, setOnButton] = useState(false)
     const animacion3 = useSpring({ opacity: !button ? 0 : 1, display: !button ? "none" : ""})
   return (
-    <article className="flex flex-col items-center bg-[#4F76C1] gap-1 p-2">
+    <article className="flex flex-col items-center border-t gap-2 p-10">
       <span className="text-xl font-bold">{!ES ? "Contact" : "Contacto"}</span>
       <div className="flex gap-4">
         <a
