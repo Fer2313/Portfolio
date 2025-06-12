@@ -144,18 +144,32 @@ export default function Cards({
                     ? projects[current].detalleI
                     : projects[current].detalleE}
                 </p>
-                    <div>
-                      <h2 className="text-2xl">
-                        {ES ? "Tecnologias utilizadas" : "Technologies used"}
-                      </h2>
-                      <span className="text-white flex flex-wrap justify-center p-2 gap-2">
-                        {tecnologies[projects[current].nombre.replace(/ /g, "_")]?.map(
-                          (Tecno, index) => (
-                            <Tecno key={index} size={28}></Tecno>
-                          )
-                        )}
-                      </span>
-                    </div>
+                <div>
+                  <h2 className="text-2xl">
+                    {ES ? "Tecnologias utilizadas" : "Technologies used"}
+                  </h2>
+                  <span className="text-white flex flex-wrap justify-center p-2 gap-2">
+                    {tecnologies[
+                      projects[current].nombre.replace(/ /g, "_")
+                    ]?.map((Tecno, index) => (
+                      <Tecno key={index} size={28}></Tecno>
+                    ))}
+                  </span>
+                </div>
+                {projects[current].nombre != "Pet Bridge" &&
+                projects[current].nombre != "Informatic Web"? (
+                  <div
+                    class="p-4 mb-4 text-xs sm:text-sm md:text-base lg:text-base mt-2 text-amber-800 rounded-lg bg-zinc-600 dark:bg-gray-800 dark:text-amber-300"
+                    role="alert"
+                  >
+                    <span class="font-medium">
+                      {ES ? "Advertencia!" : "Warning alert!"}
+                    </span>{" "}
+                    {ES
+                      ? "La pagina tarda alrededor de un minuto en cargar ya que el host esta despertando"
+                      : "The page will start in a minute and the host is waking up"}
+                  </div>
+                ) : null}
                 <div className="flex">
                   <a
                     href={projects[current].deployd}
