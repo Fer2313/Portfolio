@@ -72,6 +72,6 @@ export const projects = [
       "It is a website created with WordPress whose main purpose is to sell PC components.",
     video: "https://www.youtube.com/watch?v=O7wqdoMCCyg",
     imagen: ImageI,
-    deployd: "informatic.infinityfreeapp.com",
+    deployd: "https://informatic.infinityfreeapp.com",
   },
 ];
